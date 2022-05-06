@@ -17,7 +17,7 @@ export default class Submit extends Component {
     post.username = this.props.user.username;
 
     if (post.title) {
-      fetch('http://localhost:8080/api/posts/new', {
+      fetch('https://reddit-clo.herokuapp.com/api/posts/new', {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,

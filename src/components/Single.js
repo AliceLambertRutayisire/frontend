@@ -53,7 +53,7 @@ export default class Single extends Component {
         created: Date.now()
       };
 
-      fetch(`http://localhost:8080/api/post/${postId}/comment`, {
+      fetch(`https://reddit-clo.herokuapp.com/api/post/${postId}/comment`, {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -85,7 +85,7 @@ export default class Single extends Component {
 
   componentDidMount() {
     let postId = this.props.match.params.id;
-    fetch(`http://localhost:8080/api/post/${postId}/single`)
+    fetch(`https://reddit-clo.herokuapp.com/api/post/${postId}/single`)
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

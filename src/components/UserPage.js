@@ -9,7 +9,7 @@ export default class UserPage extends Component {
 
   adminAction = (type) => {
     if (this.props.user._id) {
-      fetch(`http://localhost:8080/api/user/${this.props.match.params.username}/action/${type}`, {
+      fetch(`https://reddit-clo.herokuapp.com/api/user/${this.props.match.params.username}/action/${type}`, {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -42,7 +42,7 @@ export default class UserPage extends Component {
           'Are you sure you want to delete this user and all the posts created by them?'
         )
       ) {
-        fetch(`http://localhost:8080/api/user/${this.props.match.params.username}`, {
+        fetch(`https://reddit-clo.herokuapp.com/api/user/${this.props.match.params.username}`, {
           method: 'DELETE',
           headers: {
             Authorization: 'Bearer ' + this.props.token,
@@ -87,7 +87,7 @@ export default class UserPage extends Component {
   };
 
   componentDidMount() {
-    fetch(`http://localhost:8080/api/user/${this.props.match.params.username}/posts`)
+    fetch(`https://reddit-clo.herokuapp.com/api/user/${this.props.match.params.username}/posts`)
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

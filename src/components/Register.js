@@ -23,7 +23,7 @@ export default class Register extends Component {
 
     // TODO Validate here
     if (user.username && user.password) {
-      fetch('http://localhost:8080/api/register', {
+      fetch('https://reddit-clo.herokuapp.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

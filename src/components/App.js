@@ -28,7 +28,7 @@ export default class App extends Component {
 
   getNextPosts = () => {
     let posts = [...this.state.posts];
-    fetch(`http://localhost:8080/api/posts/50/${this.state.currentPage}`)
+    fetch(`https://reddit-clo.herokuapp.com/api/posts/50/${this.state.currentPage}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.posts.length) {
@@ -70,7 +70,7 @@ export default class App extends Component {
     user.username = event.target.username.value;
     user.password = event.target.password.value;
     if (user.username && user.password) {
-      fetch("http://localhost:8080/api/login", {
+      fetch("https://reddit-clo.herokuapp.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -164,7 +164,7 @@ export default class App extends Component {
       });
     }
 
-    fetch("http://localhost:8080/api/posts/all")
+    fetch("https://reddit-clo.herokuapp.com/api/posts/all")
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {
@@ -182,7 +182,7 @@ export default class App extends Component {
         this.setState({ loading: false });
       });
 
-    fetch("http://localhost:8080/api/app/content")
+    fetch("https://reddit-clo.herokuapp.com/api/app/content")
       .then((res) => res.json())
       .then((json) => {
         if (json.success) {

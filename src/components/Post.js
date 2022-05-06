@@ -6,7 +6,7 @@ import Markdown from 'react-markdown';
 export default class Post extends Component {
   upvote = () => {
     if (this.props.user._id) {
-      fetch(`http://localhost:8080/api/post/${this.props.post._id}/upvote`, {
+      fetch(`https://reddit-clo.herokuapp.com/api/post/${this.props.post._id}/upvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -40,7 +40,7 @@ export default class Post extends Component {
   };
   downvote = () => {
     if (this.props.user._id) {
-      fetch(`http://localhost:8080/api/post/${this.props.post._id}/downvote`, {
+      fetch(`https://reddit-clo.herokuapp.com/api/post/${this.props.post._id}/downvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -74,7 +74,7 @@ export default class Post extends Component {
 
   deletePost = (user, id) => {
     if (this.props.user._id) {
-      fetch(`http://localhost:8080/api/post/${id}/delete`, {
+      fetch(`https://reddit-clo.herokuapp.com/api/post/${id}/delete`, {
         method: 'DELETE',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
