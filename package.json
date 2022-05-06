@@ -1,0 +1,40 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "dangerously-set-inner-html": "^2.0.1",
+    "express-validator": "^5.3.0",
+    "gh-pages": "^2.0.1",
+    "helmet": "^5.0.2",
+    "http-proxy-middleware": "^2.0.6",
+    "moment": "^2.24.0",
+    "naughty-string-validator": "^1.1.0",
+    "react": "^16.8.1",
+    "react-adsense": "^0.0.6",
+    "react-dangerous-html": "^1.0.0",
+    "react-dom": "^16.8.1",
+    "react-markdown": "^8.0.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+ 
+}
